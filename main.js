@@ -9,6 +9,7 @@
 // ricordati della proprieta’ display: none in CSS!
 // i colori su CSS sono formati da R, G e B. Quindi puoi settare un colore random semplicemente randomizzando questi tre valori e mettendoli insieme. Scopri come.
 
+
 function getRandomColor() {
   const letters = '0123456789ABCDEF';
   let color = '#';
@@ -24,6 +25,10 @@ function cambiaColori() {
     p.style.color = getRandomColor();
   });
 }
+document.addEventListener('DOMContentLoaded', () => {
+  const bottone = document.querySelector('.cambia-colore');
+  bottone.addEventListener('click', cambiaColori);
+});
 
 function grassetto() {
   const paragrafi = document.querySelectorAll('.Para');
@@ -31,7 +36,11 @@ function grassetto() {
     p.style.fontWeight = 'bold';
   });
 }
+document.addEventListener('DOMContentLoaded', () => {
+  const botton = document.querySelector('.grassetto');
+  botton.addEventListener('click', grassetto);
 
+})
 function scompari() {
   const paragrafi = document.querySelectorAll('.Para');
   paragrafi.forEach(p => {
@@ -42,3 +51,8 @@ function scompari() {
     }
   });
 }
+document.addEventListener('DOMContentLoaded', () => {
+  const bottoni = document.querySelector('.fantasma');
+  bottoni.addEventListener('click', scompari);
+
+})
